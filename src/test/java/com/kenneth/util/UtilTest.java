@@ -5,6 +5,8 @@ import static org.junit.Assert.assertEquals;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -22,7 +24,7 @@ public class UtilTest {
 	
 	@Test
 	public void getNameFunctionShouldReturnEmptyStringIfNoNameParam() throws Exception {
-		HttpServletRequestStub requestStub = new HttpServletRequestStub(mockMap);
+		HttpServletRequest requestStub = new HttpServletRequestStub(mockMap);
 		
 		assertEquals("", Util.getName(requestStub));		
 	}
@@ -31,7 +33,7 @@ public class UtilTest {
 	public void getNameFunctionShouldReturnValueIfParamValid() {
 		String[] strArr = {"kenneth"};
 		mockMap.put("name", strArr);
-		HttpServletRequestStub requestStub = new HttpServletRequestStub(mockMap);
+		HttpServletRequest requestStub = new HttpServletRequestStub(mockMap);
 		
 		assertEquals("kenneth", Util.getName(requestStub));
 	}
