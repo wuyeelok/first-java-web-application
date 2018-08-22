@@ -17,19 +17,8 @@ public class LoginServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
 		
-		out.println("<!doctype html>");
-		out.println("<html>");
-		out.println("<head>");
-		out.println("<meta charset=\"utf-8\">");
-		out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">");
-		out.println("<title>Login.do</title>");
-		out.println("</head>");
-		out.println("<body>");
-		out.println("This page is login.do(LoginServlet.java)");
-		out.println("</body>");
-		out.println("</html>");
+		request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
 	}	
 		
 
