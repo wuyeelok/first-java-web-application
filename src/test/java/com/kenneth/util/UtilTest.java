@@ -48,7 +48,7 @@ public class UtilTest {
 	public void getPasswordFunctionShouldThrowExceptionWhenNullInput() throws Exception {
 		HttpServletRequest requestStub = new HttpServletRequestStub(mockMap);
 		thrown.expect(InvalidPasswordException.class);
-		thrown.expectMessage("Invalid password!!! Password can not be empty and must be longer than 6 characters!");
+		thrown.expectMessage("Invalid password!!! Password can not be empty and must be at least 6 characters!");
 		
 		Util.getPassword(requestStub);
 	}
@@ -59,7 +59,7 @@ public class UtilTest {
 		mockMap.put("name", strArr);
 		HttpServletRequest requestStub = new HttpServletRequestStub(mockMap);
 		thrown.expect(InvalidPasswordException.class);
-		thrown.expectMessage("Invalid password!!! Password can not be empty and must be longer than 6 characters!");
+		thrown.expectMessage("Invalid password!!! Password can not be empty and must be at least 6 characters!");
 		
 		Util.getPassword(requestStub);
 	}

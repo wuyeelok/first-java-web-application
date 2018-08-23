@@ -16,7 +16,7 @@ public class Util {
 
 	public static String getPassword(HttpServletRequest request) throws Exception {
 		if(request.getParameter("password") == null || request.getParameter("password").length() < 6) {
-			throw new InvalidPasswordException("Invalid password!!! Password can not be empty and must be longer than 6 characters!");
+			throw new InvalidPasswordException("Invalid password!!! Password can not be empty and must be at least 6 characters!");
 		} else {
 			return request.getParameter("password");
 		}
