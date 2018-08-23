@@ -7,6 +7,7 @@
 <title>Yahoo!!!! From JSP</title>
 </head>
 <body>
-	<h1>Yahoo!!!! From JSP ${utilNameForJSP}</h1>
+	<h1>Yahoo!!!! From JSP The login name is ${loginName} and password is ${password}</h1>
+	
 </body>
 </html>

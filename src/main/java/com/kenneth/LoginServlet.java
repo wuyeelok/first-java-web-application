@@ -19,8 +19,15 @@ public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 				
-		String utilName = Util.getName(request); // get param name value
-		request.setAttribute("utilNameForJSP", utilName);
+		
+		String password;
+		try {
+			password = Util.getPassword(request);
+		} catch (Exception e) {
+			password = "Inval";			
+		}
+		request.setAttribute("loginName", Util.getName(request));
+		request.setAttribute("password", password);
 		
 		request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
 	}	
