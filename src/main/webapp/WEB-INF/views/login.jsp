@@ -20,10 +20,10 @@
 	</form>
 	
 	<%
-		if(request.getAttribute("name") != null && ("false").equals(request.getAttribute("validation"))) {
+		if(request.getAttribute("errorMessage") != null) {
 	%>
 		<div>
-			<p>Please enter a valid password! ${name}, password must be longer than or equal to 6 characters!</p>
+			<p>${errorMessage}</p>
 		</div>
 	<%
 		}

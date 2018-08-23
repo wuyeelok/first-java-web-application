@@ -26,22 +26,25 @@ public class LoginServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String password;
-		boolean validation;
+		boolean pwValidation;
 		try {
 			password = Util.getPassword(request);
-			validation = true;
+			pwValidation = true;
 		} catch(Exception e) {
 			password = "";
-			validation = false;
+			pwValidation = false;
 		}
 		
-		request.setAttribute("name", Util.getName(request));
-		request.setAttribute("password", password);
+		String name = Util.getName(request);
 		
-		if(validation) {
+		
+		if(pwValidation && UserValidationService.isUserValid(name, password)) {
+			request.setAttribute("name", name);
+			request.setAttribute("password", password);
 			request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
 		} else {
-			request.setAttribute("validation", "false");
+			String errorMessage = "Please enter a valid password! " + name + ", password must be longer than or equal to 6 characters!";
+			request.setAttribute("errorMessage", errorMessage);
 			request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
 		}
 		
