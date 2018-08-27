@@ -8,12 +8,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.kenneth.todo.TodoService;
 import com.kenneth.util.Util;
 
 @WebServlet(urlPatterns="/login.do")
 public class LoginServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
+	private TodoService todoservice = new TodoService();
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
@@ -40,7 +42,9 @@ public class LoginServlet extends HttpServlet {
 		
 		if(pwValidation && UserValidationService.isUserValid(name, password)) {
 			request.setAttribute("name", name);
-			request.setAttribute("password", password);
+			
+			request.setAttribute("todos", todoservice.getTodos());			
+			
 			request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
 		} else {
 			String errorMessage = "Please enter a valid password! " + name + ", password must be longer than or equal to 6 characters!";

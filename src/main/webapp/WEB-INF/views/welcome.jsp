@@ -7,7 +7,9 @@
 <title>Yahoo!!!! From JSP</title>
 </head>
 <body>
-	<h1>Welcome ${name}</h1>	
+	<h1>Welcome ${name}</h1>
+	<p>Yours Todos are:</p>
+	<p>${todos}</p>
 	
 </body>
 </html>
