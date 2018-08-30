@@ -42,10 +42,7 @@ public class LoginServlet extends HttpServlet {
 		
 		if(pwValidation && LoginService.isUserValid(name, password)) {
 			request.setAttribute("name", name);
-			
-			request.setAttribute("todos", todoservice.getTodos());			
-			
-			request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
+			response.sendRedirect("/kenneth/todo.do");
 		} else {
 			String errorMessage = "Please enter a valid password! " + name + ", password must be longer than or equal to 6 characters!";
 			request.setAttribute("errorMessage", errorMessage);
