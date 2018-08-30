@@ -1,4 +1,4 @@
-package com.kenneth;
+package com.kenneth.login;
 
 import java.io.IOException;
 
@@ -40,7 +40,7 @@ public class LoginServlet extends HttpServlet {
 		String name = Util.getName(request);
 		
 		
-		if(pwValidation && UserValidationService.isUserValid(name, password)) {
+		if(pwValidation && LoginService.isUserValid(name, password)) {
 			request.setAttribute("name", name);
 			
 			request.setAttribute("todos", todoservice.getTodos());			

@@ -1,6 +1,6 @@
-package com.kenneth;
+package com.kenneth.login;
 
-public class UserValidationService {
+public class LoginService {
 	public static boolean isUserValid(String user, String password) {
 		if("in28Minutes".equals(user) && "dummys".equals(password)) {
 			return true;					
