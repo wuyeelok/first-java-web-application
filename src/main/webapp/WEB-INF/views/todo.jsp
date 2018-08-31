@@ -14,6 +14,11 @@
 		<c:forEach items="${todos}" var="todo">
 			<li>${todo.name}</li>
 		</c:forEach>		
-	</ol>	
+	</ol>
+	
+	<form action="/kenneth/todo.do" method="post">
+		<input type="text" name="todo" required/>
+		<button type="submit">Add</button>
+	</form>
 </body>
 </html>
