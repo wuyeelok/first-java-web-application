@@ -7,7 +7,8 @@
 <meta charset="UTF-8">
 <title>Todo</title>
 </head>
-<body>	
+<body>
+	<h1>Welcome ${name}</h1>
 	<p>Yours Todos are:</p>
 	<ol>
 		<c:forEach items="${todos}" var="todo">

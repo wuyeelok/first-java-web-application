@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
 		
 		
 		if(pwValidation && LoginService.isUserValid(name, password)) {
-			request.setAttribute("name", name);
+			request.getSession().setAttribute("name", name);
 			response.sendRedirect("/kenneth/todo.do");
 		} else {
 			String errorMessage = "Please enter a valid password! " + name + ", password must be longer than or equal to 6 characters!";
