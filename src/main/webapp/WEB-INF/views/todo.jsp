@@ -43,8 +43,11 @@
 			</c:forEach>		
 		</ol>
 		
-		<form action="/kenneth/todo.do" method="post">
-			<input type="text" name="todo" required/>
+		<form action="/kenneth/add-todo.do" method="post">
+			<input type="text" name="todo" 
+			required
+			oninvalid="this.setCustomValidity('Please enter a todo')"
+ 			oninput="setCustomValidity('')"/>
 			<button type="submit">Add</button>
 		</form>
 	</div>
@@ -55,7 +58,7 @@
 	</footer>
 	
 	<script src="webjars/jquery/3.3.1-1/jquery.min.js"></script>
-    <script src="webjars/popper.js/1.14.3/popper.min.js"></script>
+    <script src="webjars/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>
