@@ -30,7 +30,7 @@
 		</ul>
 
 		<ul class="navbar-nav">
-			<li class="nav-item"><a class="nav-link" href="/kenneth/login.do">Login</a></li>
+			<li class="nav-item"><a class="nav-link" href="/kenneth/logut.do">Logout</a></li>
 		</ul>
 	</nav>
 	
