@@ -25,7 +25,7 @@
 
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="/kenneth/todo.do">Todos</a></li>
+			<li class="nav-item"><a class="nav-link" href="/kenneth/list-todo.do">Todos</a></li>
 			<li class="nav-item"><a class="nav-link" href="http://www.in28minutes.com">In28Minutes</a></li>
 		</ul>
 
