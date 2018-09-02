@@ -20,4 +20,8 @@ public class TodoService {
 		todos.add(todo);
 	}
 	
+	public void deleteTodo(Todo todo) {
+		todos.remove(todo);
+	}
+	
 }
