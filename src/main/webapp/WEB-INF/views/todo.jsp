@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="webjars/bootstrap/4.1.3/css/bootstrap.min.css">
 <title>Todo</title>
 </head>
 <body>
@@ -20,5 +21,9 @@
 		<input type="text" name="todo" required/>
 		<button type="submit">Add</button>
 	</form>
+	
+	<script src="webjars/jquery/3.3.1-1/jquery.min.js"></script>
+    <script src="webjars/popper.js/1.14.3/popper.min.js"></script>
+    <script src="webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>
