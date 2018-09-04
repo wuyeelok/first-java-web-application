@@ -3,4 +3,5 @@
   <groupId>com.kenneth</groupId>
   <artifactId>first-web-application</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
 </project>
