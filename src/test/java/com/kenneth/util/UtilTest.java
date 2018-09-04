@@ -12,6 +12,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import com.kenneth.debug.DebugUtil;
 import com.kenneth.exception.InvalidPasswordException;
 import com.kenneth.stub.HttpServletRequestStub;
 
@@ -71,5 +72,8 @@ public class UtilTest {
 		HttpServletRequest requestStub = new HttpServletRequestStub(mockMap);
 		
 		assertEquals("123456", Util.getPassword(requestStub));
+		System.out.println("Current line is " + DebugUtil.__LINE__() + ",current file is " + DebugUtil.__FILE__());
 	}
+	
+	
 }
