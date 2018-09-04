@@ -23,7 +23,7 @@ public class DeleteTodoServlet extends HttpServlet {
 		
 		todosService.deleteTodo(deleteTodo);
 		
-		response.sendRedirect("/kenneth/list-todo.do");
+		response.sendRedirect("/kenneth/list-todos.do");
 	}	
 	
 }

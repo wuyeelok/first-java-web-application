@@ -25,7 +25,7 @@
 
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="/kenneth/list-todo.do">Todos</a></li>
+			<li class="nav-item"><a class="nav-link" href="/kenneth/list-todos.do">Todos</a></li>
 			<li class="nav-item"><a class="nav-link" href="http://www.in28minutes.com">In28Minutes</a></li>
 		</ul>
 
@@ -35,14 +35,7 @@
 	</nav>
 	
 	<div class="container">
-		<h1>Welcome ${name}</h1>
-		<p>Yours Todos are:</p>
-		<ol>
-			<c:forEach items="${todos}" var="todo">
-				<li>${todo.name}&nbsp;&nbsp;<a href="./delete-todo.do?todo=${todo.name}">Delete</a></li>
-			</c:forEach>		
-		</ol>
-		
+		<h1>Your New Action Item:</h1>		
 		<form action="/kenneth/add-todo.do" method="post">
 			<input type="text" name="todo" 
 			required

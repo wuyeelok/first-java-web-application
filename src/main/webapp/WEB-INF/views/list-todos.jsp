@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="webjars/bootstrap/4.1.3/css/bootstrap.min.css">
-<title>Login</title>
+<title>Todo</title>
 
 <style>
 	.footer {
@@ -30,39 +30,22 @@
 		</ul>
 
 		<ul class="navbar-nav">
-			<li class="nav-item"><a class="nav-link" href="/kenneth/login.do">Login</a></li>
+			<li class="nav-item"><a class="nav-link" href="/kenneth/logut.do">Logout</a></li>
 		</ul>
 	</nav>
 	
 	<div class="container">
-		<h1>Yahoo!!!! From JSP The login name is ${loginName} and password is ${password}</h1>
-	
-		<form action="/kenneth/login.do" method="post">
-			<label for="name">Enter your name: </label>
-			<input id="name" type="text" name="name" placeholder="Enter your name" 
-			required 
-			oninvalid="this.setCustomValidity('Please your username')"
- 			oninput="setCustomValidity('')"/>
-			<br>
-			<label for="password">Enter your password: </label>
-			<input id="password" type="password" name="password" placeholder="Enter your password" 
-			required
-			oninvalid="this.setCustomValidity('Please your password')"
- 			oninput="setCustomValidity('')"/>
-			<br>
-			<button type="submit">Submit Form</button>
-		</form>
+		<h1>Welcome ${name}</h1>
+		<p>Yours Todos are:</p>
+		<ol>
+			<c:forEach items="${todos}" var="todo">
+				<li>${todo.name}&nbsp;&nbsp;<a href="./delete-todo.do?todo=${todo.name}">Delete</a></li>
+			</c:forEach>		
+		</ol>
 		
-		<%
-			if(request.getAttribute("errorMessage") != null) {
-		%>
-			<div>
-				<p>${errorMessage}</p>
-			</div>
-		<%
-			}
-		%>
+		<a href="./add-todo.do">Add New Todo</a>
 	</div>
+	
 	
 	<footer class="footer">
 		<p>footer content</p>
@@ -73,5 +56,3 @@
     <script src="webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-

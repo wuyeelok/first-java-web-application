@@ -13,7 +13,15 @@ public class AddTodoServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	private TodoService todosService = new TodoService();
-	
+			
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		
+		request.getRequestDispatcher("/WEB-INF/views/add-todo.jsp").forward(request, response);
+	}
+
+
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {		
@@ -21,7 +29,7 @@ public class AddTodoServlet extends HttpServlet {
 		String todo = request.getParameter("todo");
 		todosService.addTodo(new Todo(todo));
 		
-		response.sendRedirect("/kenneth/list-todo.do");
+		response.sendRedirect("/kenneth/list-todos.do");
 	}
 	
 	
