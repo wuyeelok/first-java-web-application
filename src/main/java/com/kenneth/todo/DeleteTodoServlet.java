@@ -19,7 +19,8 @@ public class DeleteTodoServlet extends HttpServlet {
 			throws ServletException, IOException {		
 		
 		String todo = request.getParameter("todo");
-		Todo deleteTodo = new Todo(todo);
+		String category = request.getParameter("category");
+		Todo deleteTodo = new Todo(todo, category);
 		
 		todosService.deleteTodo(deleteTodo);
 		

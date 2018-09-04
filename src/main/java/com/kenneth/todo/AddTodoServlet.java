@@ -27,7 +27,8 @@ public class AddTodoServlet extends HttpServlet {
 			throws ServletException, IOException {		
 		
 		String todo = request.getParameter("todo");
-		todosService.addTodo(new Todo(todo));
+		String category = request.getParameter("category");
+		todosService.addTodo(new Todo(todo, category));
 		
 		response.sendRedirect("/kenneth/list-todos.do");
 	}
