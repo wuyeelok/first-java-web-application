@@ -39,6 +39,9 @@ public class Todo {
 			return false;
 		}
 	}
-	
+	@Override
+	public String toString() {
+		return "Todo [title=" + title + ", category=" + category + "]";
+	}	
 	
 }
