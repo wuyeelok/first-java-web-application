@@ -1,4 +1,5 @@
 <%@include file="../common/header.jspf" %>
+<%@include file="../common/nav.jspf" %>
 
 <h1>Login Page</h1>
 
@@ -15,6 +16,7 @@
 </form>
 <div>
 <p>${errorMessage}</p>
+<p>${logoutMessage}</p>
 </div>
    
 <%@include file="../common/footer.jspf" %>  
