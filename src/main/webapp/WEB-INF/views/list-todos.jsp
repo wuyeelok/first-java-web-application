@@ -4,7 +4,20 @@
 <h1>List Todos Page</h1>
 
 <table>
-
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Category</th>
+		</tr>		
+	</thead>
+	<tbody>
+		<c:forEach items="${todos}" var="todo">
+			<tr>
+				<td>${todo.title}</td>
+				<td>${todo.category}</td>
+			</tr>
+		</c:forEach>
+	</tbody>
 </table>
 
 <%@include file="../common/footer.jspf" %>
