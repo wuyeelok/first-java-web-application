@@ -20,4 +20,6 @@
 	</tbody>
 </table>
 
+<a href="/add-todo.do">Add Todo</a>
+
 <%@include file="../common/footer.jspf" %>
