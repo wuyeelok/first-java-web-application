@@ -8,6 +8,7 @@
 		<tr>
 			<th>Title</th>
 			<th>Category</th>
+			<th>Action</th>
 		</tr>		
 	</thead>
 	<tbody>
@@ -15,6 +16,7 @@
 			<tr>
 				<td>${todo.title}</td>
 				<td>${todo.category}</td>
+				<td><a href="/delete-todo.do?title=${todo.title}&category=${todo.category}">Delete</a></td>
 			</tr>
 		</c:forEach>
 	</tbody>

@@ -20,4 +20,8 @@ public class TodoService {
 	public static void addTodo(Todo todo) {
 		todos.add(todo);
 	}
+	
+	public static void deleteTodo(Todo todo) {
+		todos.remove(todo);
+	}
 }
