@@ -8,23 +8,26 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/list-todos.do")
-public class ListTodosServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/delete-todo.do")
+public class DeleteTodoServlet extends HttpServlet {
 
 	
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) 
 			throws ServletException, IOException {
 		
-		request.setAttribute("todos", TodoService.retrieveTodos());
+		String title = req.getParameter("title");
+		String category = req.getParameter("category");
 		
-		request.getRequestDispatcher("/WEB-INF/views/list-todos.jsp")
-		.forward(request, response);
+		Todo deleteTodo = new Todo(title, category);
+		
+		TodoService.deleteTodo(deleteTodo);
+		
+		res.sendRedirect("/list-todos.do");
 	}
 	
 	
 
-	
 }

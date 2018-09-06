@@ -1,6 +1,7 @@
 <nav>
 	<ul>
 		<li><a href="/list-todos.do">List of Todos</a></li>
+		<li><a href="/add-todo.do">Add Todo</a>
 		<li><a href="/logout.do">Logout</a></li>
 	</ul>
 </nav>
