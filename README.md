@@ -5,7 +5,7 @@
 Using **JAVA** and **MAVEN**
 
 ## Quick start
-In *Maven Build*, in the *goal*, type ```tomcat7:run```, then visit [localhost](localhost:8080)
+In *Maven Build*, in the *goal*, type ```tomcat7:run```, then visit [localhost port 9999 path kenneth](http://localhost:9999/kenneth/)
 
 ## Reference:
 ### in28minutes  
