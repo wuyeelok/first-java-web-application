@@ -1,7 +1,6 @@
 package com.kenneth.todo;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class TodoService {
