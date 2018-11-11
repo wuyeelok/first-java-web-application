@@ -16,7 +16,15 @@ public class ListTodoServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException {		
+			throws ServletException, IOException {
+		
+		// JDBC set up for creating DAO
+		String databaseDriverClassName = getServletContext().getInitParameter("databaseDriverClassName");
+		String url= getServletContext().getInitParameter("databaseURL");
+		String uname = getServletContext().getInitParameter("databaseUsername");
+		String pass = getServletContext().getInitParameter("databasePassword");
+		
+		
 		
 		request.setAttribute("todos", todosService.getTodos());
 		request.getRequestDispatcher("/WEB-INF/views/list-todos.jsp").forward(request, response);
