@@ -1,4 +1,4 @@
-package com.kenneth.logut;
+package com.kenneth.logout;
 
 import java.io.IOException;
 
