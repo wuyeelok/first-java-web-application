@@ -9,6 +9,6 @@ In *Maven Build*, in the *goal*, type ```tomcat7:run```, then visit [localhost p
 
 ## Reference:
 ### in28minutes  
-* [JSP and Servlets Tutorial : First Java Web Application In 25 Steps](https://youtu.be/Vvnliarkw48)
+* [JSP and Servlets Tutorial : First Java Web Application In 25 Steps](https://in28minutes1.teachable.com/p/java-servlets-and-jsp-build-java-ee-jee-app-in-25-steps)
 * [GitHub](https://github.com/in28minutes/JavaWebApplicationStepByStep)
 
