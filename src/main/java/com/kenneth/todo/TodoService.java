@@ -3,13 +3,15 @@ package com.kenneth.todo;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.kenneth.todo.model.Category;
+import com.kenneth.todo.model.Todo;
+
 public class TodoService {
 	private static List<Todo> todos = new ArrayList<>();
 	
 	static {
-		todos.add(new Todo("Learn Web Application Development", "Study"));
-		todos.add(new Todo("Learn Spring MVC", "Study"));
-		todos.add(new Todo("Learn Spring Rest Service", "Study"));
+		Category study = new Category(1, "Study", null);
+		todos.add(new Todo(1, "Learn JAVA", study));
 	}
 
 	public List<Todo> getTodos() {

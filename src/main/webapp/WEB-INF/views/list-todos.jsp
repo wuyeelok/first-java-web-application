@@ -7,16 +7,18 @@
 		
 		<table class="table table-striped">
 			<thead>
-				<th>Description</th>
-				<th>Category</th>
-				<th>Action</th>
+				<tr>
+					<td>Description</td>
+					<td>Category</td>
+					<td>Action</td>
+				</tr>				
 			</thead>
 			<tbody>
 				<c:forEach items="${todos}" var="todo">
 					<tr>
-						<td>${todo.name}</td>
-						<td>${todo.category}</td>
-						<td><a class="btn btn-danger" href="./delete-todo.do?todo=${todo.name}&category=${todo.category}">Delete</a></td>
+						<td>${todo.description}</td>
+						<td>${todo.category.categoryName}</td>
+						<td>Under Construction</td>
 					</tr>
 				</c:forEach>
 			</tbody>		
@@ -24,7 +26,7 @@
 		
 		
 		
-		<a class="btn btn-success" href="./add-todo.do">Add New Todo</a>
+		<!-- <a class="btn btn-success" href="./add-todo.do">Add New Todo</a> -->
 	</div>
 	
 <%@ include file="../common/footer.jspf"%>
