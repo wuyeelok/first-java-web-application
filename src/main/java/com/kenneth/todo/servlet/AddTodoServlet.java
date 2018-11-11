@@ -1,4 +1,4 @@
-package com.kenneth.todo;
+package com.kenneth.todo.servlet;
 
 import java.io.IOException;
 
