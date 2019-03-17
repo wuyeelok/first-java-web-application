@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h1>My First JSP</h1>
+	<p>${name}&nbsp;<%=request.getAttribute("name") %></p>
 </body>
 </html>
