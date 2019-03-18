@@ -2,20 +2,24 @@
 h1 {
 	text-align: center;
 }
-form {
+
+.wrapper {
 	width: 90%;
 	max-width: 600px;
 	margin: 0 auto;
+}
+
+form {
 	border-radius: 5px;
   	background-color: Azure;
   	padding: 25px;
   	
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 8px 0 24px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -35,4 +39,9 @@ input[type=submit] {
 
 label {
 	font-size: 25px;
+}
+
+.errorMessage {
+	color: red;
+	font-family: Arial;
 }

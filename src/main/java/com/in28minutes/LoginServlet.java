@@ -15,6 +15,8 @@ public class LoginServlet extends HttpServlet {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	private UserValidationService service = new UserValidationService();
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
@@ -28,8 +30,18 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
-		request.setAttribute("username", request.getParameter("username"));
-		request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		
+		if(service.isUserValid(username, password)) {
+			request.setAttribute("username", username);			
+			request.setAttribute("password", password);
+			request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
+		} else {
+			request.setAttribute("errorMessage", "Invalid credentials");
+			request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
+		}
+		
 		
 	}
 	
