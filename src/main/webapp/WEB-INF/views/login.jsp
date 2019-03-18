@@ -8,11 +8,8 @@
 	<title>Yahoo from JSP</title>
 </head>
 <body>
-	<%
-		Date date = new Date();		
-	%>
 	<h1>My First JSP</h1>
 	<p>${name}&nbsp;<%=request.getAttribute("name") %></p>
-	<p>The date is <%=date%></p>
+	<p>${password}&nbsp;<%=request.getAttribute("password") %></p>
 </body>
 </html>
