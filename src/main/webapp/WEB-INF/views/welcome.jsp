@@ -5,17 +5,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>My First JSP</title>
+	<title>Welcome</title>
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
-	<h1>My First JSP</h1>
-	<form action="login.do" method="post">
-		<label for="username">Enter your username:</label>
-		<input type="text" name="username" id="username"  required title="Please fill in your username."/>
-		<input type="submit" value="Login"/>
-	</form>
-	
+	<h1>Welcome ${username}</h1>	
 </body>
 </html>
