@@ -16,7 +16,7 @@ public class LoginServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private UserValidationService service = new UserValidationService();
+	private UserValidationService service = new UserValidationService();
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
