@@ -1,4 +1,4 @@
-package com.in28minutes;
+package com.in28minutes.login;
 
 import java.io.IOException;
 
@@ -18,7 +18,7 @@ public class LoginServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private UserValidationService userValidationService = new UserValidationService();
+	private LoginService userValidationService = new LoginService();
 	private TodoService todoService = new TodoService();
 
 	@Override
