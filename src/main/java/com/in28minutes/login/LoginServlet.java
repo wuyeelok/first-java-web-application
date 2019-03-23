@@ -8,8 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.in28minutes.todo.TodoService;
-
 @WebServlet("/login.do")
 public class LoginServlet extends HttpServlet {
 
@@ -19,8 +17,6 @@ public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	private LoginService userValidationService = new LoginService();
-	private TodoService todoService = new TodoService();
-
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
@@ -37,10 +33,7 @@ public class LoginServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		if(userValidationService.isUserValid(username, password)) {
-			request.setAttribute("username", username);
-			request.setAttribute("todos", todoService.retrieveTodos());
-			request.setAttribute("password", password);
-			request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
+			response.sendRedirect("todo.do");
 		} else {
 			request.setAttribute("errorMessage", "Invalid credentials");
 			request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
