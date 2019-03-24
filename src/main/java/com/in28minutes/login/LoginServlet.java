@@ -33,6 +33,7 @@ public class LoginServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		if(userValidationService.isUserValid(username, password)) {
+			request.getSession().setAttribute("username", username);
 			response.sendRedirect("todo.do");
 		} else {
 			request.setAttribute("errorMessage", "Invalid credentials");
