@@ -7,17 +7,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/delete-todo.do")
-public class TodoServlet extends HttpServlet {
+@WebServlet("/list-todo.do")
+public class ListTodoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private TodoService todoService = new TodoService();
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		todoService.deleteTodo(new Todo(request.getParameter("todo")));
-		response.sendRedirect("todo.do");
+		request.setAttribute("todos", todoService.retrieveTodos());
+		request.getRequestDispatcher("/WEB-INF/views/todo.jsp").forward(request, response);
 	}
 
 }

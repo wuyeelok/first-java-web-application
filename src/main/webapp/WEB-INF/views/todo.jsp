@@ -29,7 +29,7 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-				<li class="nav-item active"><a class="nav-link" href="todo.do">Todos</a></li>
+				<li class="nav-item active"><a class="nav-link" href="list-todo.do">Todos</a></li>
 				<li class="nav-item"><a class="nav-link" href="login.do">Login</a></li>
 			</ul>
 		</div>
@@ -46,7 +46,7 @@
 			</c:forEach>
 		</ol>
 	</div>
-	<form class="wrapper" action="todo.do" method="post">
+	<form class="wrapper" action="add-todo.do" method="post">
 		<label for="todo">Name of Todo:&nbsp;</label> <input id="todo"
 			type="text" name="todo" required> <input type="submit"
 			value="Add">

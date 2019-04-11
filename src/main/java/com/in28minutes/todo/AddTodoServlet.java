@@ -7,16 +7,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/delete-todo.do")
-public class DeleteTodoServlet extends HttpServlet {
+@WebServlet("/add-todo.do")
+public class AddTodoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private TodoService todoService = new TodoService();
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String newTodo = request.getParameter("todo");
+		todoService.addTodo(new Todo(newTodo));
 
-		todoService.deleteTodo(new Todo(request.getParameter("todo")));
 		response.sendRedirect("list-todo.do");
 	}
 
