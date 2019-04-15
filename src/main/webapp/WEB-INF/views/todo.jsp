@@ -30,7 +30,7 @@
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
 				<li class="nav-item active"><a class="nav-link" href="list-todo.do">Todos</a></li>
-				<li class="nav-item"><a class="nav-link" href="login.do">Login</a></li>
+				<li class="nav-item"><a class="nav-link" href="logout.do">Logout</a></li>
 			</ul>
 		</div>
 	</nav>
