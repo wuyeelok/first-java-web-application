@@ -44,8 +44,8 @@
 		<p>Your Todo's are:</p>
 		<ol>
 			<c:forEach items="${todos}" var="todo">
-				<li>${todo.name}&nbsp;&nbsp;<a
-					href="delete-todo.do?todo=${todo.name}">Delete</a></li>
+				<li>${todo.category}&nbsp;&nbsp;${todo.name}&nbsp;&nbsp;<a
+					href="delete-todo.do?todoName=${todo.name}&todoCategory=${todo.category}">Delete</a></li>
 			</c:forEach>
 		</ol>
 	</div>

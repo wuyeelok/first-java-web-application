@@ -8,9 +8,9 @@ public class TodoService {
 	private static List<Todo> todos = new ArrayList<Todo>();
 
 	static {
-		todos.add(new Todo("Learn Java Web Application"));
-		todos.add(new Todo("Learn Spring MVC"));
-		todos.add(new Todo("Learn Sass"));
+		todos.add(new Todo("Learn Java Web Application", "Backend"));
+		todos.add(new Todo("Learn Spring MVC", "Backend"));
+		todos.add(new Todo("Learn Sass", "Frontend"));
 	}
 
 	public List<Todo> retrieveTodos() {

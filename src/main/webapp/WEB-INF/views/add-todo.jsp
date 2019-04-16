@@ -39,11 +39,13 @@
 
 	<h1>Add New Todo</h1>
 
-	
+
 	<form class="wrapper" action="add-todo.do" method="post">
-		<label for="todo">Name of Todo:&nbsp;</label> <input id="todo"
-			type="text" name="todo" required> <input type="submit"
-			value="Add">
+		<label for="todoName">Name of Todo:&nbsp;</label> <input id="todoName"
+			type="text" name="todoName" required> <br /> <label
+			for="todoName">Category of Todo:&nbsp;</label> <input
+			id="todoCategory" type="text" name="todoCategory" required> <input
+			type="submit" value="Add">
 	</form>
 
 	<footer class="footer">
