@@ -22,4 +22,10 @@ public class AddTodoServlet extends HttpServlet {
 		response.sendRedirect("list-todo.do");
 	}
 
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		request.getRequestDispatcher("/WEB-INF/views/add-todo.jsp").forward(request, response);
+	}
+
 }

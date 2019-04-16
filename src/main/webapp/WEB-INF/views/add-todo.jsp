@@ -29,23 +29,17 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-				<li class="nav-item active"><a class="nav-link" href="list-todo.do">Todos</a></li>
+				<li class="nav-item"><a class="nav-link" href="list-todo.do">Todo</a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="add-todo.do">Add New Todo</a></li>
 				<li class="nav-item"><a class="nav-link" href="logout.do">Logout</a></li>
 			</ul>
 		</div>
 	</nav>
 
-	<h1>Welcome ${username}</h1>
+	<h1>Add New Todo</h1>
 
-	<div class="wrapper">
-		<p>Your Todo's are:</p>
-		<ol>
-			<c:forEach items="${todos}" var="todo">
-				<li>${todo.name}&nbsp;&nbsp;<a
-					href="delete-todo.do?todo=${todo.name}">Delete</a></li>
-			</c:forEach>
-		</ol>
-	</div>
+	
 	<form class="wrapper" action="add-todo.do" method="post">
 		<label for="todo">Name of Todo:&nbsp;</label> <input id="todo"
 			type="text" name="todo" required> <input type="submit"

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>My First JSP</title>
+<title>Welcome ${username}</title>
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/normalize.css">
 <link rel="stylesheet" type="text/css"
@@ -29,25 +29,29 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="list-todo.do">Todo</a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="list-todo.do">Todo</a></li>
 				<li class="nav-item"><a class="nav-link" href="add-todo.do">Add
 						New Todo</a></li>
-				<li class="nav-item active"><a class="nav-link" href="login.do">Login</a></li>
+				<li class="nav-item"><a class="nav-link" href="logout.do">Logout</a></li>
 			</ul>
 		</div>
 	</nav>
 
+	<h1>Welcome ${username}</h1>
 
-	<h1>My First JSP</h1>
-	<p class="wrapper errorMessage">${errorMessage}</p>
-	<form class="wrapper" action="login.do" method="post">
-		<label for="username">Enter your username:</label> <input type="text"
-			name="username" id="username" required
-			title="Please fill in your username." /> <label for="password">Enter
-			your password:</label> <input type="password" name="password" id="password"
-			required title="Please fill in your password" /> <input
-			type="submit" value="Login" />
-	</form>
+	<div class="wrapper">
+		<p>Your Todo's are:</p>
+		<ol>
+			<c:forEach items="${todos}" var="todo">
+				<li>${todo.name}&nbsp;&nbsp;<a
+					href="delete-todo.do?todo=${todo.name}">Delete</a></li>
+			</c:forEach>
+		</ol>
+	</div>
+	<div class="wrapper">
+		<a href="add-todo.do">Add New Todo</a>
+	</div>
 
 	<footer class="footer">
 		<div>footer content</div>
