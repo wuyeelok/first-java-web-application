@@ -4,6 +4,9 @@
 
 
 <h1>My First JSP</h1>
+<div>
+${values1}
+</div>
 <p class="wrapper errorMessage">${errorMessage}</p>
 <form class="wrapper" action="login.do" method="post">
 	<label for="username">Enter your username:</label> <input type="text"
@@ -13,5 +16,6 @@
 		required title="Please fill in your password" /> <input type="submit"
 		value="Login" />
 </form>
+
 
 <%@ include file="../common/footer.jspf"%>
